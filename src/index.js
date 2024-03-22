@@ -4,6 +4,12 @@ const handlebars = require("express-handlebars").engine
 
 const app = express()
 
+<<<<<<< HEAD
+=======
+// Fazendo alteração no codigo pra subir para nova branch
+
+
+>>>>>>> a6a08be7307385656ab32b299e027de2e493f3d9
 
 const portaRede = 8081; 
 const pageExtensao = "hbs" 
