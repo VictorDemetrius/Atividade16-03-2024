@@ -1,0 +1,157 @@
+*{
+    transition: .2s;
+}
+
+.coluna{
+    display: flex;
+    width: min-content;
+    padding: 0;
+}
+
+
+
+.col-sm{
+    padding: 0px;
+}
+
+.row{
+    gap: 10px;
+}
+
+/* header cards */
+.coluna-1 .card{
+    width: 190px;
+    height: 130px;
+    /* border: 1px solid #333333; */
+}
+
+.coluna-1 .coluna .card .card-title{
+    font-size: 1.8rem;
+}
+
+
+/* Card mini perfil */
+.coluna-2 .card{
+    width: 440px;
+    height: 270px;
+    padding: 8px;
+    /* border: 1px solid #333333; */
+
+}
+
+.coluna-2 .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mini-perfil .card-content{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.mini-perfil .card-img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.mini-perfil .card-img span{
+    position: absolute;
+    color: var(--green);
+    bottom: 0;
+    right: 1rem;
+    font-size: 1.8rem;
+}
+
+.mini-perfil .card-img img{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.mini-perfil .card-tag{
+    background-color: var(--color3);
+    width: min-content;
+    padding: 2px 4px 2px 4px;
+    border-radius: 4px;
+}
+
+/* Textos */
+.mini-perfil .card-text h5.nome{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.mini-perfil .card-text p.academic{
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Languages */
+.mini-perfil .card-languages{
+    display: inline-block;
+    padding: 15px;
+    height: 60px;
+    text-align: center;
+}
+
+.mini-perfil .card-languages img{
+    width: 10%;
+}
+
+
+/* Painel */
+.painel{
+    margin-top: 2.5rem;
+}
+
+.painel .title-painel .desc{
+    color: var(--color11);
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+
+}
+
+.painel .container .card{
+    width: 300;
+    height: 280px;
+    padding: 5px;
+    /* border: 1px solid #333333; */
+    cursor: pointer;
+}
+
+.painel .container .card:hover{
+    /* box-shadow: 0rem 0rem 1.5rem #6e38c533; */
+    border: 1px solid #8b8b8b;
+}
+
+/* Painel card texts */
+
+.painel .container .card .card-subtitle{
+    margin-top: 0.5rem;
+    display: flex;
+    align-items:center;
+}
+
+.painel .container .card .card-subtitle span{
+    color: #38C557;
+}
+
+.painel .container .card .card-text{
+    margin-top: 1rem;
+}
+
+.painel .container .card .links{
+    margin-top: 2rem;
+}
+
+.painel .container .card .card-link{
+    text-decoration: none;
+    background-color: var(--color3);
+    color: var(--color11);
+    border: 0px solid #242424;
+    padding: 4px;
+    border-radius: 4px;
+}

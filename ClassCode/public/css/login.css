@@ -1,0 +1,170 @@
+* {
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    --color1: #141316;
+    --color2: #1A191D;
+    --color3: #212023;
+    --color4: #29282B;
+    --color5: #343236;
+    --color6: #434146;
+    --color7: #5F5C65;
+    --color8: #817C88;
+    --color9: #A099A9;
+    --color10: #BEB6C9;
+    --color11: #D7CDE4;
+    --color12: #EFE3FE;
+    --purple: #6F38C5;
+    --yellow: #FFC107;
+    --green: #09a33d;
+}
+
+body{
+    background-color: var(--color3);
+    color: var(--color12);
+}
+
+
+.login .card{
+    width: 380px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 4px;
+    background-color: var(--color4);
+    margin-top: 3rem;
+}
+
+.login .card form{
+    width: min-content;
+}
+
+.login .card h5{
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color:var(--color12);
+    font-weight: 400;
+}
+
+.login .card form input{
+    width: 280px;
+    height: 45px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color4);
+    border: 1px solid var(--color6);
+    color: #fff;
+    font-size: var(--color11);
+}
+
+.login .card form input#authID {
+    display: none;
+}
+.login .card form input#authName {
+    display: none;
+}
+.login .card form input#authEmail {
+    display: none;
+}
+
+.login .card form input:focus{
+    border: 1px solid var(--purple);
+    background-color: var(--color3);
+    transition: .2s;
+}
+
+.login .card button{
+    width: 280px;
+    height: 45px;
+    margin-top: 0.5rem;
+    background-color: transparent;
+    color: var(--colo12);
+    border: 1px solid var(--color6);
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.login .card button:hover{
+    background-color: var(--color3);
+    transition: .2s;
+}
+
+.login .card button img{
+    width: 25px;
+}
+
+.login .card .input-firebase{
+    display: none;
+}
+
+.login .card .radio-buttons{
+    width: 280px;
+}
+
+.login .card .radio-buttons input{
+    width: min-content;
+}
+
+.login .card .radio-buttons .rb{
+    border: 1px solid var(--color6);
+    width: 130px;
+    align-items: center;
+    border-radius: 4px;
+}
+
+
+.login .card .radio-buttons .rb label{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px 0px 15px;
+    align-items: center;
+    gap: 10px;
+}
+
+.login .card .radio-buttons .rb label input[type=radio]{
+    all:unset;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--color6);
+    border-radius: 50%;
+}
+
+.login .card .radio-buttons .rb input[type=radio]:checked {
+    background-color: var(--purple)
+  }
+
+.login .card .cadastro{
+    margin-top: 1.1rem;
+}
+
+.login .card .switch{
+    width: 135px;
+}
+
+.login .card .links-form a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--color12);
+    margin-top: 1.5rem;
+}
+
+.login .card .links-form a span{
+    color: var(--purple);
+}
+
+.login .card .links-form a:hover{
+    text-decoration:underline;
+}
+
+.login .card form #profissao-container{
+    display: none !important;
+}
+.login .card form #profissao-container.display{
+    display: block !important;
+}

@@ -1,0 +1,51 @@
+<div class="container-sm">
+    <div class="section-title mb-3">
+        <div class="title-page d-flex gap-2 align-items-center">
+            <a href="/aluno">
+                <span class="material-symbols-rounded">arrow_back</span>
+            </a>
+            <h4>Escolher tutor</h4>
+        </div>
+
+        <div class="user-container">
+            <span class="user-name">Olá, {{user.firstName}}!</span>
+            <div class="img">
+                <img src={{user.img}} alt="Imagem de perfil">
+                <i class="status-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <section class="d-flex flex-column justify-content-center">
+        <div class="title">
+        </div>
+
+        <div class="card gap-3 p-4 lista-tutores align-self-center">
+            <a class="btn btn-primary categoria" role="button">{{nomeTecnologia}}</a>
+            {{#each data}}
+                <a href="/aluno/tutor/duvida?idTecnologia={{tecnologia.idTecnologia}}&idTutor={{tutor.idTutor}}" class="card item-tutor">
+                    <div class="card-body p-2 d-flex justify-content-between align-items-center">
+                        <div class="user-info d-flex gap-2">
+                            <div class="img">
+                                <span class="material-symbols-sharp">
+                                    fiber_manual_record
+                                </span>
+                                <img src="{{tutor.perfilImg}}" alt="Imagem de perfil do tutor">
+                            </div>
+                            <div class="texts d-flex flex-column justify-content-center">
+                                <p class="title-user">{{tutor.nome}}</p>
+                                <p class="school-user">{{tutor.instEnsino}}</p>
+                            </div>
+                        </div>
+                        <div class="stars d-flex align-items-center">
+                            <p class="classificacao">4.5</p>
+                            <span class="material-symbols-rounded icon">star</span>
+                        </div>
+                    </div>
+                </a>
+
+
+            {{/each}}
+        </div>
+    </section>
+</div>

@@ -1,0 +1,39 @@
+{{!-- bootstrap class --}}
+<div class="container-sm">
+
+    <div class="section-title mb-3">
+        <div class="title-page d-flex gap-2 align-items-center">
+            <a href="/aluno">
+                <span class="material-symbols-rounded">arrow_back</span>
+            </a>
+            <h4>Comprar minutos</h4>
+        </div>
+
+        <div class="user-container">
+            <span class="user-name">Olá, {{user.firstName}}!</span>
+            <div class="img">
+                <img src={{user.img}} alt="Imagem de perfil">
+                <i class="status-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-compra">
+        
+        <form action="" method="">
+            {{!-- bootstrap class --}}
+            <div class="card">
+                <div class="card-body">
+                    <label for="customRange1" class="form-label"><span id="minuto">30</span>min</label>
+                    <input type="range" class="form-range" id="customRange1">
+                    <input class="btn btn-primary" type="submit" value="Comprar">
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+</div>

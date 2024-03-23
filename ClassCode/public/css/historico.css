@@ -1,0 +1,134 @@
+/* ABAS */
+
+.section-historico .nav-tabs{
+    border-bottom: solid 2px var(--color4);
+}
+
+.section-historico .nav-tabs button{
+    position: relative;
+    bottom: -1px;
+
+    background-color: transparent;
+    color: var(--color7) ;
+    
+    border: 0;
+    border-bottom: 2px solid var(--color5);
+    font-weight: 600;
+}
+.section-historico .nav-tabs button:hover{
+    border: 0;
+    color: var(--color12);
+    border-bottom: 2px solid var(--color7);
+}
+.section-historico .nav-tabs button.active{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--purple);
+    color: var(--color12);
+    font-weight: 600;
+}
+
+/* Aulas - Em espera e feitas */
+
+.aulas .card{
+    width: 300;
+    height: 280px;
+    padding: 5px;
+    /* border: 1px solid #333333; */
+    cursor: pointer;
+}
+
+.aulas .card:hover{
+    /* box-shadow: 0rem 0rem 1.5rem #6e38c533; */
+    border: 1px solid #8b8b8b;
+}
+
+/* Painel card texts */
+
+.aulas .card .card-text{
+    margin-top: 1rem;
+}
+
+.aula .card .links{
+    margin-top: 2rem;
+}
+
+.aulas .card .card-link{
+    text-decoration: none;
+    background-color: var(--color3);
+    color: var(--color11);
+    border: 0px solid #242424;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.aulas .card img{
+    width: 50px;
+    height: 50px;
+    margin-top: 2rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Tutores */
+.tutores .card{
+    width: 18rem;
+    height: min-content;
+    cursor: pointer;
+}
+
+.tutores .card:hover{
+    border: 1px solid #8b8b8b;
+    transition: .2s;
+}
+
+.tutores .card .card-body{
+    padding: 0;
+}
+
+.tutores .card .card-body .img{
+    position: relative;
+}
+
+.tutores .card .card-body .img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tutores .card .card-body .img span{
+    position: absolute;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    font-size: 1.8rem;
+    color: var(--green);
+}
+
+
+.tutores .card .card-body .texts h5{
+    margin-bottom: 0;
+    color: var(--color12);
+    font-size: 18px;
+}
+
+.tutores .card .card-body .texts p{
+    margin-bottom: 0;
+    font-size: 15px;
+    color: var(--color10);
+}
+
+.tutores .card .card-categorias{
+    height: 20px;
+    margin-top: 10px;
+}
+
+
+.tutores .card .card-categorias p{
+    background-color: var(--color3);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color12);
+    border-radius: 4px;
+}
