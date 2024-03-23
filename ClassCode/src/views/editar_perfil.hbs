@@ -1,0 +1,54 @@
+<div class="container-sm">
+
+  <div class="section-title mb-3">
+    <div class="title-page d-flex gap-2 align-items-center">
+      <a href="/{{userSession.tipoUser}}/perfil">
+        <span class="material-symbols-rounded">arrow_back</span>
+      </a>
+      <h4>Editar perfil</h4>
+    </div>
+
+    <div class="user-container">
+      <span class="user-name">Olá,{{userSession.firstName}}!</span>
+      <div class="img">
+        <img src={{userSession.img}} alt="Imagem de perfil" />
+        <i class="status-icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <section class="perfil-aluno">
+    <div class="card perfil">
+
+      <div class="card-body">
+        <form action="/{{userSession.tipoUser}}/edit/update" method="get">
+          <div class="img">
+            <img src={{user.perfilImg}} alt="" />
+          </div>
+
+          <div class="input">
+            <label for="forName">Nome</label>
+            <input type="text" name="nome" value="{{user.nome}}" />
+          </div>
+
+          <div class="input">
+            <label for="forEnsino">Instituição de Ensino</label>
+            <input type="text" name="instEnsino" value="{{user.instEnsino}}" />
+          </div>
+
+          <div class="input">
+            <label for="forEmail">Conta Google</label>
+            <p class="p-email">{{user.email}}</p>
+          </div>
+
+          <div class="btn-save">
+            <button>Salvar<span
+                class="material-symbols-rounded">check_box</span></button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,117 @@
+{{!-- <aside class="menu-lateral">
+    <nav class="nav flex-column">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled">Disabled</a>
+    </nav>
+</aside> 
+{{!-- bootstrap class --}}
+<div class="container-sm">
+    <section class="header">
+        <div class="title-section">
+            <h4 class="titulo-cor">Olá, {{user.firstName}}</h4>
+        </div>
+        {{!-- bootstrap class --}}
+        <div class="container">
+            {{!-- Linha --}}
+            <div class="row content-header">
+                {{!-- Coluna --}}
+                <div class="col coluna-1">
+                    <div class="row">
+                        <div class="coluna">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <p class="card-text">Aulas diárias</p>
+                                    <h5 class="card-title">3/<span
+                                            style="font-size: 22px; color: var(--color8)">6</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coluna">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <p class="card-text">Acúmulo de aulas</p>
+                                    <h5 class="card-title">15</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coluna">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <p class="card-text">Classificação</p>
+                                    <h5 class="card-title">4.5</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coluna">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <p class="card-text">Ganhos</p>
+                                    <h5 class="card-title"><span style="font-size: 22px">$</span>20</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- Lado perfil --}}
+                <div class="col coluna-2">
+                    <div class="row justify-content-end">
+                        <div class="coluna">
+                            {{!-- Card mini perfil --}}
+                            <div class="card mini-perfil">
+                                <div class="card-body">
+                                    <p class="card-tag">Tutor</p>
+                                    <div class="card-content">
+                                        <div class="card-text">
+                                            <h5 class="nome">{{user.name}}</h5>
+                                            <p class="academic desc">{{user.instEnsino}}</p>
+                                            <p class="academic desc">{{user.profissao}}</p>
+                                        </div>
+                                        <div class="card-img">
+                                            <span class="material-symbols-sharp">
+                                                fiber_manual_record
+                                            </span>
+                                            <img src={{user.img}} alt="Imagem de perfil">
+                                        </div>
+                                    </div>
+                                    <div class="card-languages">
+                                        <img src="/img/icon/nodejs.svg" alt="Icon referente a linguagem">
+                                         <img src="/img/icon/javascript.svg" alt="Icon referente a linguagem">
+                                         <img src="/img/icon/java.svg" alt="Icon referente a linguagem">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="painel">
+        <div class="title-painel">
+            <p class="desc">Esse aqui é o seu painel de dúvidas recebidas</p>
+        </div>
+        {{!-- bootstrap class --}}
+        <div class="container">
+            <div class="row">
+                {{#each data.duvidas}}
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{dataValues.assuntoDuvida}}</h5>
+                            <h6 class="card-subtitle desc"><span class="material-symbols-sharp">
+                                    fiber_manual_record
+                                </span>{{aluno.nome}}</h6>
+                            <p class="card-text desc">{{dataValues.descricaoDuvida}}</p>
+                            <div class="links">
+                                <a href="#" class="card-link">{{tecnologia.nomeTecnologia}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</div>

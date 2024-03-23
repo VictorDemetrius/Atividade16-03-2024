@@ -1,0 +1,71 @@
+<div class="container-sm">
+
+    <div class="section-title mb-3">
+        <div class="title-page d-flex gap-2 align-items-center">
+            <a href="/aluno/tutor?idTecnologia={{query.idTecnologia}}">
+                <span class="material-symbols-rounded">arrow_back</span>
+            </a>
+            <h4>Criar nova dúvida</h4>
+        </div>
+
+        <div class="user-container">
+            <span class="user-name">Olá, {{user.firstName}}!</span>
+            <div class="img">
+                <img src={{user.img}} alt="Imagem de perfil">
+                <i class="status-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <form action="/duvida/cadastro" method="POST" class="card section-duvida p-4">
+        <input type="text" id="idTecnologia" name="idTecnologia" value={{query.idTecnologia}}>
+        <input type="text" id="idTutor" name="idTutor" value={{query.idTutor}}>
+        <div>
+            <label for="assunto">Assunto</label>
+            <input require type="text" class="assunto" id="assunto" name="assunto" placeholder="Dê um título para sua dúvida">
+        </div>
+        <div>
+            <label>Adicionar imagens</label>
+            <div class="image-container">
+                <label for="inputFile" class="add-img">
+                    <span class="material-symbols-rounded">upload_file</span>
+                    <span>Adicionar</span>
+                </label>
+            </div>
+            <input type="file" require class="inputFile" id="inputFile" name="imagens">
+        </div>
+        <div>
+            <label for="descricao">Descrição</label>
+            <textarea require name="descricao" id="descricao" cols="30" rows="10" placeholder="Descreva detalhadamente no que precisa de ajuda. Lembre-se: as imagens complementam tudo o que você disser aqui"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Criar dúvida</button>
+    </form>
+</div>
+
+
+<script>
+    function previewImage() {
+        var inputFile = document.getElementById('inputFile');
+        var imageContainer = document.getElementsByClassName('image-container')[0];
+
+        // Verifica se algum arquivo foi selecionado
+        if (inputFile.files && inputFile.files[0]) {
+            var reader = new FileReader();
+
+            // Define uma função para ser executada quando o carregamento do arquivo for concluído
+            reader.onload = function(e) {
+                var image = document.createElement('img');
+                image.src = e.target.result;
+                image.classList.add('preview-image');
+                imageContainer.appendChild(image);
+            };
+
+            // Lê o arquivo como uma URL de dados
+            reader.readAsDataURL(inputFile.files[0]);
+        }
+    }
+
+    // Chama a função de pré-visualização sempre que o campo de entrada de arquivo for alterado
+    document.getElementById('inputFile').addEventListener('change', previewImage);
+</script>
